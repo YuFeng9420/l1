@@ -28,7 +28,18 @@ public class WindowLogisticsHubInfo extends AbstractModuleWindow<LogisticsHubInf
     public void onOpened()
     {
         super.onOpened();
+        refresh();
+    }
 
+    @Override
+    public void onUpdate()
+    {
+        super.onUpdate();
+        refresh();
+    }
+
+    private void refresh()
+    {
         if (moduleView.getLevel() == 0)
         {
             final Text range = findPaneOfTypeByID(LABEL_RANGE, Text.class);

@@ -13,11 +13,19 @@ import com.minecolonies.core.colony.buildings.modules.WarehouseRequestQueueModul
 import com.minecolonies.core.colony.requestsystem.resolvers.DeliverymenRequestResolver;
 import org.jetbrains.annotations.NotNull;
 
+import static com.minecolonies.api.util.constant.RSConstants.CONST_WAREHOUSE_RESOLVER_PRIORITY;
+
 public class LogisticsHubDeliveryResolver extends DeliverymenRequestResolver<Delivery>
 {
     public LogisticsHubDeliveryResolver(@NotNull final ILocation location, @NotNull final IToken<?> token)
     {
         super(location, token);
+    }
+
+    @Override
+    public int getPriority()
+    {
+        return CONST_WAREHOUSE_RESOLVER_PRIORITY + 1;
     }
 
     @Override

@@ -99,6 +99,7 @@ public class BuildingLogisticsHub extends BuildingWareHouse
     {
         final ImmutableList.Builder<IRequestResolver<?>> builder = ImmutableList.builder();
         final IFactoryController factory = getColony().getRequestManager().getFactoryController();
+        builder.addAll(super.createResolvers());
         builder.add(new BuildingRequestResolver(getLocation(), factory.getNewInstance(TypeConstants.ITOKEN)));
         builder.add(new LogisticsHubRequestResolver(getLocation(), factory.getNewInstance(TypeConstants.ITOKEN)));
         builder.add(new LogisticsHubDeliveryResolver(getLocation(), factory.getNewInstance(TypeConstants.ITOKEN)));
@@ -109,7 +110,7 @@ public class BuildingLogisticsHub extends BuildingWareHouse
     public void onColonyTick(@NotNull final IColony colony)
     {
         super.onColonyTick(colony);
-        if (!colony.getWorld().isClientSide && getCustomName().isEmpty())
+        if (!colony.getWorld().isClientSide && (getCustomName() == null || getCustomName().isEmpty()))
         {
             setCustomBuildingName("\u7269\u6D41\u7AD9\u70B9 #" + colony.getID());
         }

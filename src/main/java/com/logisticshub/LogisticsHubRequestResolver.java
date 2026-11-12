@@ -177,10 +177,14 @@ public class LogisticsHubRequestResolver extends AbstractRequestResolver<IDelive
                 return null;
             }
 
-            if (getStockCount(site, completedRequest.getRequest()) < completedRequest.getRequest().getMinimumCount())
+            if (getStockCount(site, completedRequest.getRequest()) < completedRequest.getRequest().getCount())
             {
                 PHASE.remove(completedRequest.getId());
-                if (hub != null) hub.removeTask(completedRequest.getId());
+                if (hub != null)
+                {
+                    hub.updateTaskPhase(completedRequest.getId(), "FAILED");
+                    hub.removeTask(completedRequest.getId());
+                }
                 manager.updateRequestState(completedRequest.getId(), RequestState.REPORTED);
                 return null;
             }

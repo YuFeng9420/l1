@@ -114,8 +114,8 @@ public class RequestTownHallLogisticsMessage
             TownHallLogisticsResponseMessage response = new TownHallLogisticsResponseMessage(
                 siteCount, warehouseCount, totalCouriers, totalOpenRequests, unassigned,
                 levelCounts, sites, unassignedRows);
-            LogisticsHubNetwork.CHANNEL.sendTo(response, player.connection.connection,
-                net.minecraftforge.network.NetworkDirection.PLAY_TO_CLIENT);
+            LogisticsHubNetwork.CHANNEL.send(
+                net.minecraftforge.network.PacketDistributor.PLAYER.with(() -> player), response);
         });
         ctx.get().setPacketHandled(true);
     }
