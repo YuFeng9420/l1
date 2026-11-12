@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+run/
+run-data/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# 系统
+.DS_Store
+Thumbs.db

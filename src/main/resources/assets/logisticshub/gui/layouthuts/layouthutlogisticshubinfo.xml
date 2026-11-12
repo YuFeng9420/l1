@@ -1,0 +1,39 @@
+<window size="240 320" pause="false" lightbox="false">
+    <image source="minecolonies:textures/gui/builderhut/builder_paper.png" size="240 320"/>
+
+    <label size="164 11" pos="13 20" textalign="MIDDLE" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.title)"/>
+
+    <label id="nameValue" size="164 11" pos="13 32" textalign="MIDDLE" color="black"/>
+
+    <label size="164 11" pos="13 46" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.range)"/>
+    <label id="rangeValue" size="164 11" pos="13 58" color="black"/>
+
+    <label size="164 11" pos="13 76" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.storage)"/>
+    <label id="storageValue" size="164 11" pos="13 88" color="black"/>
+
+    <label size="164 11" pos="13 106" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.warehouse)"/>
+    <label id="warehouseValue" size="164 11" pos="13 118" color="black"/>
+
+    <label size="164 11" pos="13 136" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.couriers)"/>
+    <label id="couriersValue" size="164 11" pos="13 148" color="black"/>
+
+    <label size="164 11" pos="13 166" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.requests)"/>
+    <label id="requestsValue" size="164 11" pos="13 178" color="black"/>
+
+    <label size="210 11" pos="15 196" color="black"
+           label="$(com.logisticshub.gui.logisticshub.info.tasks)"/>
+
+    <list id="taskList" size="210 110" pos="15 208">
+        <box size="206 34" linewidth="0">
+            <label id="taskRequester" size="206 11" pos="0 0" color="black"/>
+            <label id="taskItem" size="206 11" pos="0 11" color="black"/>
+            <label id="taskPhase" size="206 11" pos="0 22" color="black"/>
+        </box>
+    </list>
+</window>

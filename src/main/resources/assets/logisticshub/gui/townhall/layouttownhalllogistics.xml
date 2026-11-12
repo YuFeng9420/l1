@@ -1,0 +1,47 @@
+<window size="400 320" pause="false" lightbox="false">
+    <image source="minecolonies:textures/gui/builderhut/builder_paper_wide_structure.png" size="400 320"/>
+
+    <label size="180 11" pos="110 20" textalign="MIDDLE" color="black"
+           label="$(com.logisticshub.gui.townhall.logistics)"/>
+
+    <label size="180 11" pos="20 42" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.sites)"/>
+    <label id="sitesCount" size="180 11" pos="20 54" color="black"/>
+
+    <label size="180 11" pos="20 70" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.warehouses)"/>
+    <label id="warehousesCount" size="180 11" pos="20 82" color="black"/>
+
+    <label size="180 11" pos="20 98" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.couriers)"/>
+    <label id="couriersTotal" size="180 11" pos="20 110" color="black"/>
+
+    <label size="180 11" pos="20 126" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.requests)"/>
+    <label id="requestsTotal" size="180 11" pos="20 138" color="black"/>
+
+    <label size="180 11" pos="20 154" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.unassigned)"/>
+    <label id="unassignedTotal" size="180 11" pos="20 166" color="black"/>
+
+    <label size="180 11" pos="20 182" color="black"
+           label="$(com.logisticshub.gui.townhall.summary.levels)"/>
+    <label id="levelsValue" size="180 11" pos="20 194" color="black"/>
+
+    <list id="sites" size="180 180" pos="200 42">
+        <box size="176 28" linewidth="0">
+            <label id="siteName" size="176 11" pos="0 0" color="black"/>
+            <label id="siteDetail" size="176 11" pos="0 13" color="black"/>
+        </box>
+    </list>
+
+    <label size="180 11" pos="200 232" color="black"
+           label="$(com.logisticshub.gui.townhall.unassigned.list)"/>
+
+    <list id="unassignedList" size="180 76" pos="200 244">
+        <box size="176 22" linewidth="0">
+            <label id="unRequester" size="176 11" pos="0 0" color="black"/>
+            <label id="unItem" size="176 11" pos="0 11" color="black"/>
+        </box>
+    </list>
+</window>
